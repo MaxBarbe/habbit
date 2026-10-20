@@ -1,5 +1,5 @@
 # Versions présentes dans l’environnement source ; validation complète IA requise.
-streamlit==1.63.0
+streamlit==1.66.0
 fastapi==0.141.1
 uvicorn==0.53.0
 python-multipart==0.0.32
