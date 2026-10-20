@@ -20,3 +20,4 @@ backend/storage/
 .pytest_cache/
 .venv*/
 **/site-packages/
+*.egg-info/

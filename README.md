@@ -6,7 +6,7 @@
 
 ## Le projet
 
-Habbit est un prototype Python qui rassemble un dressing numérique, l’analyse de vêtements et des recommandations de tenues selon le contexte. Cette première publication est issue de **APP-HABIT-MEN** ; les variantes APP-Habit et APP-HABITv2 restent dans les dossiers locaux d’origine.
+Habbit est un prototype Python qui rassemble un dressing numérique, l’analyse de vêtements et des recommandations de tenues selon le contexte. Cette première publication est issue de **APP-HABIT-MEN** ; les variantes précédentes sont archivées dans [`versions/APP-Habit`](versions/APP-Habit) et [`versions/APP-HABITv2`](versions/APP-HABITv2). Les trois variantes sont ainsi réunies dans ce dépôt.
 
 - Import de photos de vêtements et détourage via un moteur BiRefNet/Candle externe.
 - Reconnaissance avec Marqo FashionCLIP ; estimation des couleurs, matières, saisons et styles.
@@ -21,7 +21,7 @@ La page GitHub Pages présente le projet. Elle n’exécute pas l’application 
 
 ## Installation locale
 
-La variante source utilise Python 3.13 sur Mac Apple Silicon. Les versions Python sont consignées dans `requirements.txt`, à partir des métadonnées de son environnement local ; une installation propre et une validation IA complète restent à effectuer.
+La variante source utilise Python 3.13 sur Mac Apple Silicon. Les dépendances de la version principale ont été mises à jour depuis PyPI le 20 octobre 2026 et sont consignées dans `requirements.txt`. Pillow reste en 12.3.0 pour respecter la contrainte de Streamlit (`<13`). Une installation propre, `pip check` et des contrôles des imports, de l’API et de la base vide ont été réalisés. La validation complète des inférences IA reste à effectuer avec les moteurs et leurs poids. Les archives conservent leur code historique ; elles ne sont pas couvertes par ces tests.
 
 ```bash
 git clone https://github.com/MaxBarbe/habbit.git
@@ -73,6 +73,7 @@ Documentation interactive : `http://127.0.0.1:8000/docs`.
 | `backend/database/` | Persistance SQLite |
 | `engines/fashn-vton/` | Moteur tiers et adaptateur local |
 | `docs/` | Présentation publique GitHub Pages |
+| `versions/` | Sources historiques APP-Habit et APP-HABITv2 |
 
 ## Publier une nouvelle version
 

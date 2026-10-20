@@ -1,11 +1,11 @@
-# Versions présentes dans l’environnement source ; validation complète IA requise.
-streamlit==1.63.0
-fastapi==0.141.1
-uvicorn==0.53.0
+# Versions stables vérifiées sur PyPI le 2026-10-20.
+streamlit==1.66.0
+fastapi==0.151.0
+uvicorn==0.54.0
 python-multipart==0.0.32
 requests==2.34.2
-numpy==2.5.3
+numpy==2.5.4
 pillow==12.3.0
-torch==2.14.0
-torchvision==0.29.0
+torch==2.14.1
+torchvision==0.29.1
 open_clip_torch==3.3.0
