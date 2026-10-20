@@ -20,7 +20,7 @@ jobs:
       - uses: actions/checkout@v4
       - name: Actualiser la version affichée
         run: python3 -c "import json,pathlib; pathlib.Path('docs/version.json').write_text(json.dumps({'version':pathlib.Path('VERSION').read_text().strip()}))"
-      - uses: actions/configure-pages@v5
+      - uses: actions/configure-pages@v6
       - uses: actions/upload-pages-artifact@v3
         with:
           path: docs
