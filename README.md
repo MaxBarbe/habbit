@@ -1,5 +1,7 @@
 # Habbit ✦
 
+> **[Découvrir la page de présentation du projet →](https://maxbarbe.github.io/habbit/)**
+
 **Un dressing intelligent pour composer ses tenues à partir de ses propres vêtements.**
 
 [Présentation](https://maxbarbe.github.io/habbit/) · [Versions](https://github.com/MaxBarbe/habbit/releases) · [Historique](CHANGELOG.md)
