@@ -1,0 +1,29 @@
+name: Présentation GitHub Pages
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+concurrency:
+  group: pages
+  cancel-in-progress: true
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Actualiser la version affichée
+        run: python3 -c "import json,pathlib; pathlib.Path('docs/version.json').write_text(json.dumps({'version':pathlib.Path('VERSION').read_text().strip()}))"
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: docs
+      - name: Déployer
+        id: deployment
+        uses: actions/deploy-pages@v4
