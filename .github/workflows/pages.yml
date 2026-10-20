@@ -17,7 +17,7 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
       - name: Actualiser la version affichée
         run: python3 -c "import json,pathlib; pathlib.Path('docs/version.json').write_text(json.dumps({'version':pathlib.Path('VERSION').read_text().strip()}))"
       - uses: actions/configure-pages@v5
